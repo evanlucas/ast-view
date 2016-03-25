@@ -1,0 +1,349 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Monaco;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#left {
+  width: 50%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  background-color: white;
+}
+
+#right {
+  width: 50%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  background-color: #1e2028;
+  overflow-x: scroll;
+}
+
+#left #input {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
+  line-height: 20px;
+  font-size: 20px;
+  padding: 10px;
+  font-family: Monaco;
+  resize: none;
+}
+
+#left #input,
+#left #input:focus,
+#left #input:active {
+  outline: none;
+}
+
+.editor {
+  background-color: #1e2028;
+  color: #fff;
+}
+.wrap-guide {
+  background-color: #494C5A;
+}
+.indent-guide {
+  color: #494C5A;
+}
+.gutter {
+  background-color: #1e2028;
+  color: #c5c8c6;
+}
+.gutter .line-number.cursor-line {
+  background-color: #313131;
+  color: #c5c8c6;
+}
+.gutter .line-number.cursor-line-no-selection {
+  color: #c5c8c6;
+}
+.gutter .line-number.folded,
+.gutter .line-number:after,
+.fold-marker:after {
+  color: #969896;
+}
+.invisible {
+  color: #fff;
+}
+.cursor {
+  color: white;
+}
+.selection .region {
+  background-color: #065ca7;
+}
+.invisible-character {
+  color: #313131;
+}
+.search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid #969896;
+}
+.search-results .marker.current-result .region {
+  border: 1px solid white;
+}
+.comment {
+  color: #45b641;
+}
+.entity.name.type {
+  color: #f0c674;
+  text-decoration: underline;
+}
+.entity.other.inherited-class {
+  color: #45b641;
+}
+.entity.other.attribute-name {
+  color: #fff;
+}
+.entity.other.attribute-name.jade {
+  color: #00a0be;
+}
+.entity.name.function {
+  color: #00a0be;
+}
+.keyword {
+  color: #b21889;
+}
+.keyword.control {
+  color: #b21889;
+}
+.keyword.operator {
+  color: #fff;
+}
+.keyword.other.special-method {
+  color: #1a76d1;
+}
+.keyword.other.unit {
+  color: #786dc4;
+}
+.keyword.typeof,
+.keyword.new {
+  color: #b21889;
+}
+.storage {
+  color: #b21889;
+}
+.constant {
+  color: #fff;
+}
+.constant.character.escape {
+  color: #00a0be;
+}
+.constant.numeric {
+  color: #786dc4;
+}
+.constant.other.color,
+.constant.other.rgb-value {
+  color: #786dc4;
+}
+.constant.other.symbol {
+  color: #45b641;
+}
+.constant.null,
+.constant.boolean {
+  color: #b21889;
+}
+.variable {
+  color: #83c057;
+}
+.variable.interpolation {
+  color: #6aa63e;
+}
+.variable.parameter.function {
+  color: #fff;
+}
+.invalid.illegal {
+  background-color: #db2c38;
+  color: #1e2028;
+}
+.string {
+  color: #db2c38;
+}
+.string.regexp {
+  color: #db2c38;
+}
+.string.regexp .source.ruby.embedded {
+  color: #786dc4;
+}
+.string.other.link {
+  color: #1a76d1;
+}
+.punctuation.definition.comment {
+  color: #45b641;
+}
+.punctuation.definition.variable,
+.punctuation.definition.parameters,
+.punctuation.definition.array {
+  color: #fff;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #1a76d1;
+}
+.punctuation.definition.bold {
+  color: #f0c674;
+  font-style: bold;
+}
+.punctuation.definition.italic {
+  color: #786dc4;
+  font-style: italic;
+}
+.punctuation.definition.string {
+  color: #db2c38;
+}
+.punctuation.section.embedded {
+  color: #b51f29;
+}
+.support.class {
+  color: #f0c674;
+}
+.support.function {
+  color: #00a0be;
+}
+.support.function.any-method {
+  color: #1a76d1;
+}
+.support.constant.property-value {
+  color: #b21889;
+}
+.entity.name.function {
+  color: #00a0be;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #f0c674;
+}
+.entity.name.section {
+  color: #1a76d1;
+}
+.entity.name.tag {
+  color: #db2c38;
+  text-decoration: underline;
+}
+.entity.other.attribute-name {
+  color: #fff;
+}
+.entity.other.attribute-name.id {
+  color: #1a76d1;
+}
+.meta.class {
+  color: #f0c674;
+}
+.meta.link {
+  color: #c67c48;
+}
+.meta.require {
+  color: #1a76d1;
+}
+.meta.selector {
+  color: #786dc4;
+}
+.meta.separator {
+  background-color: #313131;
+  color: #fff;
+}
+.none {
+  color: #fff;
+}
+.markup.bold {
+  color: #c67c48;
+  font-style: bold;
+}
+.markup.changed {
+  color: #786dc4;
+}
+.markup.deleted {
+  color: #db2c38;
+}
+.markup.italic {
+  color: #786dc4;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #1a76d1;
+}
+.markup.inserted {
+  color: #45b641;
+}
+.markup.list {
+  color: #db2c38;
+}
+.markup.quote {
+  color: #c67c48;
+}
+.markup.raw.inline {
+  color: #45b641;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #45b641;
+}
+.editor[mini] .scroll-view .selection .region {
+  background-color: #065ca7;
+}
+.editor[mini] .selection .region,
+.editor[mini]::shadow .selection .region,
+.highlights .selection .region {
+  background-color: #065ca7;
+}
+.editor[mini].is-focused .selection .region,
+.editor[mini].is-focused::shadow .selection .region {
+  background-color: #065ca7;
+}
+
+
+.editor {
+  counter-reset: linenumber;
+  font-size: 16px;
+  font-family: Monaco;
+}
+
+.editor > .line {
+  counter-increment: linenumber;
+}
+
+.editor > .line:before {
+  content: counter(linenumber);
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  display: inline-block;
+  width: 40px;
+  border-right: 1px solid #ddd;
+}
+
+html, body, #editor { height: 100%; }
+
+/* mysterious pre */
+body > pre { display: none }
+
+.left, .right { height: 100%; overflow: visible; display: block; float: left; position: relative; width: 50%; }
+.right { background: #eee; }
+/* codemirror */
+.CodeMirror { font-size:20px; }
+
+@media all and (max-width: 800px) { .CodeMirror { font-size: 14px !important; } }
+
+#edit .CodeMirror .errorLine { background: rgba(255,0,0,0.25); }
+
+.CodeMirror-scroll { overflow: auto; }
+
+.CodeMirror,
+.CodeMirror-scroll,
+.CodeMirror-gutter,
+.CodeMirror-gutters {
+  height: 100%;
+}
