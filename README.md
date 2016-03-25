@@ -16,7 +16,9 @@ console.log(require('util').inspect(obj, {
 ## Install
 
 ```bash
-$ npm install ast-view
+$ npm install
+$ npm start
+$ open http://localhost:10013
 ```
 
 ## Test
